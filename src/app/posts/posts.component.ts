@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class PostsComponent implements OnInit {
 
-  posts$: any
+  posts$: any;
 
   constructor(private data: DataService) { }
 
@@ -16,6 +16,7 @@ export class PostsComponent implements OnInit {
     this.data.getPosts().subscribe(
       data => this.posts$ = data
     )
+
   }
 
 }
